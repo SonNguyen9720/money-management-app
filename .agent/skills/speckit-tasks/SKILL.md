@@ -1,15 +1,12 @@
 ---
-name: speckit-tasks
-description: Break down implementation plans into actionable task lists. Use after
-  planning to create a structured task breakdown. Generates tasks.md with ordered,
-  dependency-aware tasks.
-compatibility: Requires spec-kit project structure with .specify/ directory
+name: "speckit-tasks"
+description: "Generate an actionable, dependency-ordered tasks.md for the feature based on available design artifacts."
+compatibility: "Requires spec-kit project structure with .specify/ directory"
 metadata:
-  author: github-spec-kit
-  source: templates/commands/tasks.md
+  author: "github-spec-kit"
+  source: "templates/commands/tasks.md"
 ---
 
-# Speckit Tasks Skill
 
 ## User Input
 
@@ -55,7 +52,7 @@ You **MUST** consider the user input before proceeding (if not empty).
 
 ## Outline
 
-1. **Setup**: Run `.specify/scripts/powershell/check-prerequisites.ps1 -Json` from repo root and parse FEATURE_DIR and AVAILABLE_DOCS list. All paths must be absolute. For single quotes in args like "I'm Groot", use escape syntax: e.g 'I'\''m Groot' (or double-quote if possible: "I'm Groot").
+1. **Setup**: Run `.specify/scripts/bash/check-prerequisites.sh --json` from repo root and parse FEATURE_DIR and AVAILABLE_DOCS list. All paths must be absolute. For single quotes in args like "I'm Groot", use escape syntax: e.g 'I'\''m Groot' (or double-quote if possible: "I'm Groot").
 
 2. **Load design documents**: Read from FEATURE_DIR:
    - **Required**: plan.md (tech stack, libraries, structure), spec.md (user stories with priorities)
