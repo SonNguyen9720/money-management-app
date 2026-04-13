@@ -1,5 +1,5 @@
 import { mockStorage } from './mockStorage';
-import { Wallet } from '../utils/schemas';
+import type { Wallet } from '../utils/schemas';
 
 export const walletService = {
   getWallets: async (userId: string): Promise<Wallet[]> => {

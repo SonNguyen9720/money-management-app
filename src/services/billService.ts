@@ -1,5 +1,5 @@
 import { mockStorage } from './mockStorage';
-import { Bill } from '../utils/schemas';
+import type { Bill } from '../utils/schemas';
 
 export const billService = {
   getBills: async (userId: string): Promise<Bill[]> => {

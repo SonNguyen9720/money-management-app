@@ -1,4 +1,4 @@
-import { Transaction } from './schemas';
+import type { Transaction } from './schemas';
 
 export const exportToCSV = (transactions: Transaction[], filename: string = 'export.csv') => {
   const headers = ['Date', 'Type', 'Amount', 'Note'];

@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { Card } from '../../components/primitives';
 
 export default function Charts({ data }: { data: { label: string, value: number, color: string }[] }) {

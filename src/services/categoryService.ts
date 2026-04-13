@@ -1,5 +1,5 @@
 import { mockStorage } from './mockStorage';
-import { Category } from '../utils/schemas';
+import type { Category } from '../utils/schemas';
 
 export const categoryService = {
   getCategories: async (userId: string): Promise<Category[]> => {

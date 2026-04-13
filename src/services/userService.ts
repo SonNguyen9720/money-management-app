@@ -1,5 +1,5 @@
 import { mockStorage } from './mockStorage';
-import { User, UserPreferences } from '../utils/schemas';
+import type { User, UserPreferences } from '../utils/schemas';
 
 export const userService = {
   updatePreferences: async (userId: string, preferences: UserPreferences): Promise<User> => {

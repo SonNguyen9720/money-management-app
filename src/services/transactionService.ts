@@ -1,5 +1,5 @@
 import { mockStorage } from './mockStorage';
-import { Transaction } from '../utils/schemas';
+import type { Transaction } from '../utils/schemas';
 import { walletService } from './walletService';
 
 export const transactionService = {

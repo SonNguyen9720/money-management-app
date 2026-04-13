@@ -1,5 +1,5 @@
 import { mockStorage } from './mockStorage';
-import { User } from '../utils/schemas';
+import type { User } from '../utils/schemas';
 
 export const authService = {
   login: async (email: string, password: string): Promise<User> => {

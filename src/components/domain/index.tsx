@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card } from '../primitives';
-import { Wallet, Transaction } from '../../utils/schemas';
+import type { Wallet, Transaction } from '../../utils/schemas';
 
 export const WalletCard: React.FC<{ wallet: Wallet }> = ({ wallet }) => (
   <Card style={{ marginBottom: 'var(--spacing-sm)' }}>

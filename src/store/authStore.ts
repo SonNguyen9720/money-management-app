@@ -1,5 +1,5 @@
 import { create } from 'zustand';
-import { User } from '../utils/schemas';
+import type { User } from '../utils/schemas';
 import { persist } from 'zustand/middleware';
 
 interface AuthState {

@@ -1,5 +1,5 @@
 import { mockStorage } from './mockStorage';
-import { Goal } from '../utils/schemas';
+import type { Goal } from '../utils/schemas';
 
 export const goalService = {
   getGoals: async (userId: string): Promise<Goal[]> => {

@@ -1,5 +1,5 @@
 import { mockStorage } from './mockStorage';
-import { Budget } from '../utils/schemas';
+import type { Budget } from '../utils/schemas';
 
 export const budgetService = {
   getBudgets: async (userId: string): Promise<Budget[]> => {

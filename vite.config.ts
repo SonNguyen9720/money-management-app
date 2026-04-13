@@ -6,6 +6,7 @@ import { resolve } from 'path'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
+  // @ts-ignore - Vitest config typing conflict
   test: {
     environment: 'jsdom',
     globals: true,

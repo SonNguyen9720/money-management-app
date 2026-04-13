@@ -1,12 +1,12 @@
-import { describe, it, expect, vi } from 'vitest';
+import { describe, it, expect } from 'vitest';
 import { mockStorage } from './mockStorage';
 
 // Quick mock for global localStorage testing
 const storage: Record<string, string> = {};
 global.localStorage = {
-  getItem: (key) => storage[key] || null,
-  setItem: (key, value) => { storage[key] = value; },
-  removeItem: (key) => { delete storage[key]; },
+  getItem: (key: string) => storage[key] || null,
+  setItem: (key: string, value: string) => { storage[key] = value; },
+  removeItem: (key: string) => { delete storage[key]; },
   clear: () => { Object.keys(storage).forEach(k => delete storage[k]); },
   length: 0,
   key: () => null
