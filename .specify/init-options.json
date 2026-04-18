@@ -1,11 +1,10 @@
 {
   "ai": "agy",
-  "ai_commands_dir": null,
   "ai_skills": true,
   "branch_numbering": "sequential",
   "here": true,
-  "offline": false,
+  "integration": "agy",
   "preset": null,
-  "script": "ps",
-  "speckit_version": "0.4.4"
+  "script": "sh",
+  "speckit_version": "0.5.2.dev0"
 }
