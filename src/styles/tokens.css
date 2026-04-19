@@ -1,22 +1,49 @@
 :root {
-  /* Colors */
-  --bg-primary: #ffffff;
-  --bg-secondary: #f4f4f5;
-  --text-primary: #18181b;
-  --text-secondary: #71717a;
-  --accent-color: #0ea5e9;
-  --danger-color: #ef4444;
-  --success-color: #22c55e;
-  --border-color: #e4e4e7;
+  /* Colors - Editorial Vault */
+  --md-sys-color-surface: #fbf9f8;
+  --md-sys-color-surface-container-low: #f5f3f3;
+  --md-sys-color-surface-container: #f0eded;
+  --md-sys-color-surface-container-high: #eae8e7;
+  --md-sys-color-surface-container-lowest: #ffffff;
+  
+  --md-sys-color-primary: #0040a1;
+  --md-sys-color-primary-container: #0056d2;
+  --md-sys-color-on-primary: #ffffff;
+  
+  --md-sys-color-secondary: #2a6b2c;
+  --md-sys-color-secondary-container: #acf4a4;
+  --md-sys-color-on-secondary-container: #307231;
+  
+  --md-sys-color-tertiary: #940010;
+  --md-sys-color-tertiary-container: #ba1b20;
+  
+  --md-sys-color-on-surface: #1b1c1c;
+  --md-sys-color-outline-variant: rgba(195, 198, 214, 0.15); /* 15% opacity ghost border */
+  
+  /* Backward compat / specific UI states */
+  --bg-primary: var(--md-sys-color-surface-container-low);
+  --bg-secondary: var(--md-sys-color-surface-container-lowest);
+  --text-primary: var(--md-sys-color-on-surface);
+  --text-secondary: #424654;
+  --accent-color: var(--md-sys-color-primary);
+  --danger-color: var(--md-sys-color-tertiary);
+  --success-color: var(--md-sys-color-secondary);
+  --border-color: transparent;
   
   /* Typography */
   --font-family: 'Inter', system-ui, sans-serif;
+  --font-display: 'Manrope', system-ui, sans-serif;
   
   /* Layout */
-  --border-radius: 8px;
+  --border-radius: 9999px; /* Max roundness for buttons */
+  --border-radius-card: 1.5rem; /* xl for cards */
   --spacing-sm: 8px;
   --spacing-md: 16px;
   --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  
+  /* Elevation */
+  --shadow-ambient: 0px 8px 24px rgba(27, 28, 28, 0.06);
 }
 
 body {
@@ -27,23 +54,26 @@ body {
 }
 
 .btn {
-  padding: 8px 16px;
+  padding: 12px 24px;
   border-radius: var(--border-radius);
   border: none;
   cursor: pointer;
+  font-family: var(--font-family);
   font-weight: 500;
+  transition: background-color 0.2s, box-shadow 0.2s;
 }
 .btn-primary {
   background-color: var(--accent-color);
-  color: white;
+  color: var(--md-sys-color-on-primary);
 }
 .btn-secondary {
-  background-color: var(--bg-secondary);
-  color: var(--text-primary);
+  background-color: var(--md-sys-color-surface-container-high);
+  color: var(--accent-color);
+  border: none;
 }
 .btn-danger {
   background-color: var(--danger-color);
-  color: white;
+  color: var(--md-sys-color-on-primary);
 }
 
 .input-group {
@@ -53,10 +83,17 @@ body {
   margin-bottom: var(--spacing-md);
 }
 .input-field {
-  padding: 8px 12px;
-  border: 1px solid var(--border-color);
-  border-radius: var(--border-radius);
+  padding: 12px 16px;
+  background-color: var(--md-sys-color-surface-container-low);
+  border: 1px solid var(--md-sys-color-outline-variant);
+  border-radius: 0.75rem;
   font-family: var(--font-family);
+  transition: background-color 0.2s, border-color 0.2s;
+}
+.input-field:focus {
+  background-color: var(--md-sys-color-surface-container-lowest);
+  border-color: rgba(0, 64, 161, 0.2); /* 20% ghost border primary */
+  outline: none;
 }
 .input-error {
   color: var(--danger-color);
@@ -64,8 +101,9 @@ body {
 }
 
 .card {
-  background-color: var(--bg-secondary);
-  border-radius: var(--border-radius);
-  padding: var(--spacing-md);
-  border: 1px solid var(--border-color);
+  background-color: var(--md-sys-color-surface-container-lowest);
+  border-radius: var(--border-radius-card);
+  padding: var(--spacing-xl);
+  border: none;
+  box-shadow: var(--shadow-ambient);
 }
