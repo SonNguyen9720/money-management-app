@@ -3,13 +3,13 @@
 **Feature Branch**: `003-update-dashboard`  
 **Created**: 2026-04-19  
 **Status**: Draft  
-**Input**: User description: "Update the dashboard screen. The design MUST follow the design in 'Wallet Management' in my Google Stitch design."
+**Input**: User description: "Update the dashboard screen. The design MUST follow the design in 'Overview Dashboard' in my Google Stitch design. This screen has a total available balance."
 
 ## User Scenarios & Testing *(mandatory)*
 
 ### User Story 1 - View Updated Dashboard (Priority: P1)
 
-As a user, I want the dashboard to visually match the premium "Wallet Management" design from the Google Stitch project, so I can have an immersive and high-end experience when managing my finances.
+As a user, I want the dashboard to visually match the premium "Overview Dashboard" design from the Google Stitch project, including the total available balance hero card, income/expenses, net cash flow, top budgets, recent activity, and savings goal doughnut, so I can have an immersive and high-end experience when managing my finances.
 
 **Why this priority**: The visual overhaul of the dashboard is the core requirement of this feature.
 
@@ -17,7 +17,7 @@ As a user, I want the dashboard to visually match the premium "Wallet Management
 
 **Acceptance Scenarios**:
 
-1. **Given** I am logged into the application, **When** I navigate to the dashboard, **Then** I see the styling, layout, typography, and color palette matching the "Wallet Management" design system precisely.
+1. **Given** I am logged into the application, **When** I navigate to the dashboard, **Then** I see the styling, layout, typography, and color palette matching the "Overview Dashboard" design system precisely.
 
 ---
 
@@ -31,7 +31,7 @@ As a user, I want the dashboard to visually match the premium "Wallet Management
 
 ### Functional Requirements
 
-- **FR-001**: System MUST update the dashboard layout to align with the "Wallet Management" Google Stitch design.
+- **FR-001**: System MUST update the dashboard layout to align with the "Overview Dashboard" Google Stitch design, including a bento grid layout with sections for total balance, cash flow, budgets, recent activity, and savings goals.
 - **FR-002**: System MUST apply the design system typography (Manrope for Display/Headlines and Inter for Body/Labels).
 - **FR-003**: System MUST NOT use standard 1px dividing lines for UI separation, using background color transitions instead.
 - **FR-004**: System MUST apply defined elevation/depth techniques using Tonal Layering or subtle ambient shadow techniques.
@@ -45,10 +45,10 @@ As a user, I want the dashboard to visually match the premium "Wallet Management
 
 ### Measurable Outcomes
 
-- **SC-001**: 100% of dashboard layout sections match against the structural guidelines of the "Wallet Management" Stitch design without regression of existing capabilities.
+- **SC-001**: 100% of dashboard layout sections match against the structural guidelines of the "Overview Dashboard" Stitch design without regression of existing capabilities.
 - **SC-002**: The dashboard must render fully without console UI/styling errors and load cleanly across viewport sizes.
 
 ## Assumptions
 
-- We assume the Google Stitch "Wallet Management" UI provides all necessary states (empty, error, loading) for the dashboard context. Provide fallbacks if missing.
+- We assume the Google Stitch "Overview Dashboard" UI provides all necessary states (empty, error, loading) for the dashboard context. Provide fallbacks if missing.
 - We assume existing backend APIs remain untouched; this is strictly a frontend presentation and token mapping task.

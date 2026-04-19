@@ -1,0 +1,309 @@
+.dashboard-layout {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 100vh;
+  padding: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.dashboard-header {
+  margin-bottom: 40px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.dashboard-title {
+  font-family: var(--font-display);
+  font-size: 2.25rem;
+  font-weight: 800;
+  letter-spacing: -0.05em;
+  color: var(--md-sys-color-on-surface);
+  margin-bottom: 8px;
+}
+
+.dashboard-subtitle {
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.dashboard-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.dashboard-bento {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 24px;
+}
+
+/* Bento Cells */
+.bento-hero {
+  grid-column: span 12;
+}
+@media (min-width: 768px) {
+  .bento-hero {
+    grid-column: span 8;
+  }
+}
+
+.bento-side {
+  grid-column: span 12;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+@media (min-width: 768px) {
+  .bento-side {
+    grid-column: span 4;
+  }
+}
+
+.bento-budgets {
+  grid-column: span 12;
+}
+@media (min-width: 768px) {
+  .bento-budgets {
+    grid-column: span 4;
+  }
+}
+
+.bento-activity {
+  grid-column: span 12;
+}
+@media (min-width: 768px) {
+  .bento-activity {
+    grid-column: span 5;
+  }
+}
+
+.bento-savings {
+  grid-column: span 12;
+}
+@media (min-width: 768px) {
+  .bento-savings {
+    grid-column: span 3;
+  }
+}
+
+/* Card overrides for bento */
+.bento-card {
+  background-color: var(--md-sys-color-surface-container-lowest);
+  border-radius: 2.5rem; /* 40px */
+  padding: 32px;
+  box-shadow: var(--shadow-ambient);
+}
+
+.bento-card-title {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  margin-bottom: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Hero Card specifics */
+.hero-card {
+  background: linear-gradient(135deg, var(--md-sys-color-primary), var(--md-sys-color-primary-container));
+  border-radius: 2.5rem;
+  padding: 32px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 64, 161, 0.15);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 300px;
+}
+
+.hero-bg-glow {
+  position: absolute;
+  top: -64px;
+  right: -64px;
+  width: 256px;
+  height: 256px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 50%;
+  filter: blur(48px);
+}
+
+.hero-label {
+  color: rgba(204, 216, 255, 0.8);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.75rem;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.hero-balance {
+  color: white;
+  font-family: var(--font-display);
+  font-size: 3.75rem;
+  font-weight: 900;
+  letter-spacing: -0.05em;
+  margin: 0;
+}
+
+.hero-growth-badge {
+  background-color: var(--md-sys-color-secondary-container);
+  color: var(--md-sys-color-on-secondary-container);
+  font-size: 0.875rem;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 9999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  vertical-align: middle;
+  margin-left: 12px;
+}
+
+/* Small Cards (Income / Expense) */
+.stat-card-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  flex: 1;
+}
+
+.stat-card {
+  background-color: var(--md-sys-color-surface-container-lowest);
+  padding: 24px;
+  border-radius: 2rem;
+  box-shadow: var(--shadow-ambient);
+  border: 1px solid var(--md-sys-color-outline-variant);
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-icon {
+  margin-bottom: 16px;
+  padding: 8px;
+  border-radius: 16px;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stat-icon.income {
+  background-color: var(--md-sys-color-secondary-container);
+  color: var(--md-sys-color-secondary);
+}
+
+.stat-icon.expense {
+  background-color: var(--md-sys-color-tertiary-container);
+  color: var(--md-sys-color-tertiary);
+}
+
+.stat-label {
+  color: var(--text-secondary);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 4px;
+}
+
+.stat-value {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--md-sys-color-on-surface);
+  margin: 0;
+}
+
+/* Cash Flow Card */
+.cash-flow-card {
+  background-color: var(--md-sys-color-surface-container-lowest);
+  padding: 24px;
+  border-radius: 2rem;
+  box-shadow: var(--shadow-ambient);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.progress-bar-bg {
+  height: 4px;
+  background-color: var(--md-sys-color-surface-container-high);
+  border-radius: 9999px;
+  overflow: hidden;
+  margin: 16px 0;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  border-radius: 9999px;
+}
+
+/* Activity List */
+.activity-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  cursor: pointer;
+}
+.activity-item:last-child {
+  margin-bottom: 0;
+}
+
+.activity-icon-box {
+  width: 48px;
+  height: 48px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--md-sys-color-surface-container-low);
+  margin-right: 16px;
+}
+
+.activity-item:hover .activity-icon-box {
+  background-color: rgba(0, 64, 161, 0.05);
+}
+
+.activity-title {
+  font-weight: 700;
+  color: var(--md-sys-color-on-surface);
+  margin: 0;
+}
+
+.activity-subtitle {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+  margin: 0;
+}
+
+.activity-amount {
+  font-family: var(--font-display);
+  font-weight: 700;
+}
+
+.activity-amount.negative {
+  color: var(--md-sys-color-tertiary);
+}
+
+.activity-amount.positive {
+  color: var(--md-sys-color-secondary);
+}
+
+/* Doughnut SVG */
+.doughnut-wrapper {
+  position: relative;
+  width: 160px;
+  height: 160px;
+  margin: 0 auto;
+}

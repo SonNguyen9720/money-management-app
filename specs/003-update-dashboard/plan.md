@@ -5,7 +5,7 @@
 
 ## Summary
 
-This feature updates the dashboard screen's design to strictly adhere to the premium "Wallet Management" style from the Google Stitch project, aligned with the internal "Editorial Vault" design philosophy. The technical approach involves utilizing the existing `tokens.css` to govern layout, spacing (asymmetrical), and typography (Manrope/Inter) without adding new architectural dependencies.
+This feature updates the dashboard screen's design to strictly adhere to the premium "Overview Dashboard" style from the Google Stitch project, aligned with the internal "Editorial Vault" design philosophy. The technical approach involves utilizing the existing `tokens.css` to govern layout (a bento grid with hero card for balance, cash flow stats, budgets, and transactions), spacing (asymmetrical), and typography (Manrope/Inter) without adding new architectural dependencies.
 
 ## Technical Context
 
