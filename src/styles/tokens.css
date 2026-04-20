@@ -9,6 +9,8 @@
   --md-sys-color-primary: #0040a1;
   --md-sys-color-primary-container: #0056d2;
   --md-sys-color-on-primary: #ffffff;
+  --md-sys-color-primary-fixed-dim: #adc6ff;
+  --md-sys-color-on-primary-fixed-variant: #00468c;
   
   --md-sys-color-secondary: #2a6b2c;
   --md-sys-color-secondary-container: #acf4a4;
@@ -41,6 +43,11 @@
   --spacing-md: 16px;
   --spacing-lg: 24px;
   --spacing-xl: 32px;
+  
+  /* Sidebar & Navigation */
+  --sidebar-width: 280px;
+  --mobile-nav-height: 72px;
+  --desktop-breakpoint: 1024px;
   
   /* Elevation */
   --shadow-ambient: 0px 8px 24px rgba(27, 28, 28, 0.06);

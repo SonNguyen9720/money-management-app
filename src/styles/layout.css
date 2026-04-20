@@ -1,0 +1,31 @@
+.app-layout {
+  display: flex;
+  min-height: 100vh;
+  background-color: var(--md-sys-color-surface-container-low);
+}
+
+.app-sidebar {
+  width: var(--sidebar-width);
+  flex-shrink: 0;
+}
+
+.app-main {
+  flex: 1;
+  min-width: 0; /* Prevents flex items from overflowing */
+  padding: var(--spacing-xl);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+  overflow-y: auto;
+}
+
+@media (max-width: 1023px) {
+  .app-sidebar {
+    display: none;
+  }
+  
+  .app-main {
+    padding: var(--spacing-md);
+    padding-bottom: calc(var(--mobile-nav-height) + var(--spacing-md));
+  }
+}
