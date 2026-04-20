@@ -1,0 +1,100 @@
+.sidebar {
+  width: var(--sidebar-width);
+  height: 100vh;
+  background-color: var(--md-sys-color-surface);
+  display: flex;
+  flex-direction: column;
+  padding: var(--spacing-lg);
+  box-sizing: border-box;
+  position: fixed;
+  left: 0;
+  top: 0;
+  box-shadow: var(--shadow-ambient);
+  z-index: 100;
+}
+
+.sidebar-brand {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--md-sys-color-primary);
+  margin-bottom: var(--spacing-xl);
+  padding: 0 var(--spacing-md);
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  flex: 1;
+}
+
+.sidebar-nav-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  padding: var(--spacing-md);
+  border-radius: var(--border-radius); /* 9999px pill */
+  text-decoration: none;
+  color: var(--text-secondary);
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 0.9375rem;
+  transition: all 0.2s ease;
+}
+
+.sidebar-nav-item:hover {
+  background-color: var(--md-sys-color-surface-container-low);
+}
+
+.sidebar-nav-item.active {
+  background-color: var(--md-sys-color-primary-fixed-dim);
+  color: var(--md-sys-color-on-primary-fixed-variant);
+}
+
+.sidebar-nav-item .material-symbols-outlined {
+  font-size: 24px;
+}
+
+.sidebar-footer {
+  margin-top: auto;
+  padding-top: var(--spacing-lg);
+  border-top: 1px solid var(--md-sys-color-outline-variant);
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  padding: var(--spacing-md);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--md-sys-color-primary-container);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-name {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.user-email {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}

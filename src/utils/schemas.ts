@@ -9,6 +9,7 @@ export type UserPreferences = z.infer<typeof UserPreferencesSchema>;
 
 export const UserSchema = z.object({
   id: z.string().uuid(),
+  name: z.string(),
   email: z.string().email(),
   passwordHash: z.string(),
   preferences: UserPreferencesSchema,

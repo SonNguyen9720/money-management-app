@@ -15,6 +15,7 @@ export const authService = {
     
     const newUser: User = {
       id: crypto.randomUUID(),
+      name: email.split('@')[0],
       email,
       passwordHash: password,
       preferences: { currency: 'USD', theme: 'light', timezone: 'UTC' }
