@@ -11,6 +11,7 @@ import BudgetsPage from './pages/budgeting/Budgets'
 import GoalsPage from './pages/budgeting/Goals'
 import BillsPage from './pages/dashboard/Bills'
 import Dashboard from './pages/dashboard/index'
+import TransactionsPage from './pages/transactions/index'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -19,6 +20,7 @@ createRoot(document.getElementById('root')!).render(
         <Route path="/auth" element={<AuthPage />} />
         <Route path="/" element={<Root />}>
           <Route index element={<Dashboard />} />
+          <Route path="transactions" element={<TransactionsPage />} />
           <Route path="wallets" element={<WalletsPage />} />
           <Route path="categories" element={<CategoriesPage />} />
           <Route path="budgets" element={<BudgetsPage />} />
