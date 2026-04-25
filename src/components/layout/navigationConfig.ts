@@ -20,7 +20,7 @@ export const navigationItems: NavigationItem[] = [
   {
     id: 'transactions',
     label: 'Transactions',
-    path: '/categories', // Based on existing Root.tsx mapping
+    path: '/transactions',
     icon: 'receipt_long'
   },
   {
